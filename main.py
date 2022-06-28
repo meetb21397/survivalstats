@@ -18,7 +18,7 @@ import xgboost
 from sklearn.neighbors import LocalOutlierFactor
 
 
-data = pd.read_csv('C:/Users/m997t/Desktop/Test/survival/112011.csv')
+data = pd.read_csv('C:/Users/m997t/PycharmProjects/survivalstats/112011.csv')
 data.head()
 data = data.drop(['name', 'group', 'aliveat1'], axis=1)
 data.head()
