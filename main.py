@@ -36,6 +36,8 @@ data = data.dropna()
 print(data.isnull().sum())
 print(data.shape)
 
+sns.pairplot(data)
+
 data.loc[data.alive == 1, 'dead'] = 0
 data.loc[data.alive == 0, 'dead'] = 1
 data.groupby('dead').count()
@@ -186,3 +188,5 @@ model5 = xgboost.XGBClassifier(min_child_weight=3, max_depth=8, learning_rate=0.
 score = cross_val_score(model5, X, y, cv=10)
 print(score)
 print('Mean: ', score.mean())
+
+
